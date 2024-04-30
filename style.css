@@ -1,81 +1,145 @@
-       
-       
-        .caja {
-            /* propiedades especiales que se heredan */
-            font-size: 20px;
-            color: rgb(17, 199, 144);
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
 
-            outline: 1px solid red;
-            width: 100px;
-            height: 100px;
-            padding: 50px;
-            border: 5px solid green;
-            margin: 50px;
-        }
-        /* ejercicio de selectores */
-        header > nav > a{
-            font-size: 50px;
-        }
-      
-        aside a{
-            color: chartreuse;
-        }
-        h1{ color: blue;
-        }
+/* ejercicio de caja */
+.caja {
+    /* propiedades especiales que se heredan */
+    font-size: 20px;
+    color: rgb(11, 192, 247);
 
-        
-        /* compartir propiedad css */
+    outline: 1px solid rgb(221, 122, 29);
+    width: 100px;
+    height: 100px;
+    padding: 50px;
+    border: 5px solid orange;
+    margin: 50px;
+}
 
-        h2, .texto-centrado{
-            text-align: center;
-        }
+/* ejercicio de selectores */
+header > nav > a {
+    font-size: 50px;
+}
 
-        .texto-grande {
-            font-size: 60px;
-            color: blueviolet;
-        }
-    
-        #texto-pequeno {
-            font-size: 10px;
-            color: lawngreen; 
-        }
+aside a {
+    color: green;
+}
 
-       /*  <!-- estilizar texto --> */
-       /* text-aling */
-       .alineacion {
-        /* alineacion a la izquierda */
-        /* text-aling: left; */
+/* compartir propiedad css */
+h2, .texto-centrados {
+    text-align: center;
+}
 
-        /* alineacion a la izquierda */
-        /* text-aling: center;*/
 
-        /* alineacion a la izquierda */
-        /* text-aling: justify; */
-        text-align: justify;
-       }
+h1 {
+    color: red;
+}
 
-       .tamaños {
-        /* tamaño por defecto */
-        /* font-size: 16px */
-        font-size: 100px;
-       }
+.texto-grande {
+    font-size: 60px;
+    color: rgb(12, 204, 124);
+}
 
-       .decoraciones {
-        /* subrayado */
-        text-decoration: underline;
-       }
+#texto-pequeno {
+    font-size: 10px;
+    color: rgb(141, 2, 111);
+}
 
-       .quitar-subrayado {
-        text-decoration: unset;
-       }
+/* estilizar textos */
 
-       .transformaciones {
-        /* primera letra de cada palabra en mayuscula  */
-        /* text-transform:capitalize; */
+/* text-align */
+.alineacion {
+    /* alineacion a la izquier */
+    /* text-align: left; */
 
-        /* todo en mayuscula */
-        /* text-transform:uppercase; */
+    /* alineacion al centro */
+    /* text-align: center; */
 
-        /* todo en minuscula */
-        text-transform: lowercase;
-       }
+    /* alineacion a la derecha */
+    /* text-align: right; */
+
+    /* justificar texto */
+    text-align: justify;
+}
+
+.tamanos {
+    /* tamano por defecto */
+    /* font-size: 16px; */
+    font-size: 100px;
+}
+
+.decoraciones {
+    /* subrayado */
+    /* text-decoration: underline; */
+
+    text-decoration: line-through;
+}
+
+.quitar-subrayado {
+    text-decoration: unset;
+}
+
+.transformaciones {
+    /* primera letra de cada palabra en mayuscula */
+    /* text-transform: capitalize; */
+
+    /* todo en mayuscula */
+    /* text-transform: uppercase; */
+
+    /* todo minusculas */
+    text-transform: lowercase;
+}
+
+.espaciado-de-textos {
+    /* modifica es espacio entre cada linea de texto */
+    line-height: 25px;
+    /* espaciado entre letras */
+    letter-spacing: 3px;
+    /* espaciado entre palabras */
+    word-spacing: 20px;
+}
+
+.grosor-letra {
+    /* el valor de grosor se puede manejar en un rango de 0 - 900, va de 100 en 100 */
+    font-weight: lighter;
+}
+
+.posicion-caja-1, .posicion-caja-2, .posicion-caja-3, .posicion-caja-4 {
+    height: 100px;
+    width: 100px;
+    border: 3px solid blue;
+    margin: 20px;
+}
+
+.posicion-caja-1 {
+    /* el movimiento va a ser relativo a su posicion original */
+    position: relative;
+    left: 50px;
+    bottom: 50px;
+}
+
+.caja-padre {
+    position: relative;
+    border: 2px red solid;
+}
+.posicion-caja-2 {
+    /* el elemento pierde su posicion */
+    /* y lo podemos mover en relacion al elemento padre que tenga un relative */
+    position: absolute;
+    border-color: blueviolet;
+    bottom: 0;
+    right: 0;
+}
+
+.posicion-caja-3 {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.posicion-caja-4 {
+    position: sticky;
+    top: 0;
+}
