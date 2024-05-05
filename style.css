@@ -164,3 +164,85 @@ h1 {
     justify-self: flex-start;
     align-self: center;
 }
+
+.caja-distribucion {
+    /* unidad: vh -> view height */
+    /*         vw -> view width */
+    border: 1px solid rgb(9, 168, 94);
+    /* height: 100vh; */
+    display: flex;
+    /* centrar */
+    /* justify-content: center; */
+
+
+     /* ajusta el mismo espacio entre los elemento */
+    justify-content: space-between;
+
+    
+    /* ajusta el mismo espacio alrededor de cada elemento */
+    /* justify-content: space-around; */
+
+    /* indicar la direccion en el que los elementos se van a distribuir */
+    /* flex-direction: column; */
+}
+
+.caja-distribucion div {
+    height: 20px;
+    width: 20px;
+    border: 1px solid red;
+    color: chartreuse;
+    padding: 20px;
+}
+
+.boton-animado {
+    
+    padding: 10px;
+    border: none;
+    /* modifica el fondo del elemento */
+    background: rgb(9, 215, 230);
+    color: azure;
+     /* redondear esquinas */
+     border-radius: 5px;
+     /* modificar el cursor */
+     cursor: pointer;
+     /* tranciosiones */
+     transition: 
+         padding 2s,
+         background-color 2s,
+         color 2s,
+         font-size 2s;
+}
+
+/* Pseudo-clases */
+.boton-animado:hover {
+    padding: 50px;
+    background-color: rgb(126, 18, 18);
+    color: rgb(203, 203, 16);
+    font-size: 30px;
+}
+
+.caja-animada {
+    position: relative;
+    left: 0px;
+    margin-top: 20px;
+    height: 100px;
+    width: 100px;
+    background-color: aqua;
+    animation: mover-derecha 4s linear infinite alternate;
+}
+/* keyframes */
+@keyframes mover-derecha {
+    0% {
+        top: 0px;
+        left: 0px;
+        background-color: rgb(74, 252, 4);
+    }
+    50% {
+        top: 50px;
+    }
+    100% {
+        top: 0;
+        left: 200px;
+        background-color: rgb(236, 203, 16);
+    }
+}
