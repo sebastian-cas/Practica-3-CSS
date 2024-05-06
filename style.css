@@ -133,16 +133,16 @@ h1 {
     right: 0;
 }
 
-.posicion-caja-3 {
-   /*  position: fixed;
+/* .posicion-caja-3{
+    position: fixed;
     bottom: 0;
-    right: 0; */
-}
+    right: 0;
+} */
 
-.posicion-caja-4 {
-    /* position: sticky;
-    top: 0; */
-}
+/* .posicion-caja-4 {
+    position: sticky;
+    top: 0;
+} */
 
 .gato-imagen{
     width: 300px;
@@ -244,5 +244,54 @@ h1 {
         top: 0;
         left: 200px;
         background-color: rgb(236, 203, 16);
+    }
+}
+/* las etiquetas inline por defecto son:
+-button
+-input
+-img
+-span
+ */
+.transformacio{
+    display: block;
+    margin: auto;
+    transition: transform 1s;
+}
+
+.transformacion:hover {
+    /* escalar elementos */
+    transform: scale(1.2);
+
+    /* rotar elementos */
+   /*  transform: rotate(45deg); */
+
+   /* transladar en ej eje x y eje y */
+   /* transform: translate(10px, -10px); */
+}
+
+.titulo-animado {
+    text-align: center;
+    animation: aparecer 2s linear forwards;
+}
+@keyframes aparece {
+    from{
+        transform: translate(-1000px, 0px);
+    }
+    to {
+        transform: translate(0px, 0px);
+    }
+}
+
+.responsive {
+    font-size: 150px;
+}
+@media screen and (width < 800px) {
+    .responsive{
+        font-size: 120px;
+    }
+}
+@media screen and (width < 640px) {
+    .responsive{
+        font-size: 100px;
     }
 }
